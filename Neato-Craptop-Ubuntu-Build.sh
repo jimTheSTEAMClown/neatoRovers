@@ -26,7 +26,7 @@
 echo "----------------------------------------------------"
 echo "Neato New Ubuntu Build / Update Script" 
 echo "----------------------------------------------------"
-echo " "
+echo "    "
 pwd
 echo " "
 echo "----------------------------------------------------"
@@ -38,6 +38,9 @@ echo "  sudo apt upgrade -y "
 echo "----------------------------------------------------"
 echo "NEATO Specific Tools and Apps"
 echo "----------------------------------------------------"
+echo "sudo apt install build-essential "
+echo "sudo apt install ros-humble-xacro "
+echo "sudo apt install python3-rosdep2 "
 echo "  "
 echo "  "
 echo "  "
@@ -194,6 +197,24 @@ echo " -  Installing libfuse2 for the VIAM application"
 echo "-------------------------------------------------------"
 sudo apt install libfuse2 -y
 echo "-------------------------------------------------------"
+echo " "
+echo "----------------------------------------------------"
+echo "NEATO Specific Tools and Apps"
+echo "----------------------------------------------------"
+sudo apt install build-essential
+sudo apt install ros-humble-xacro
+sudo apt install python3-rosdep2
+mkdir neato
+cd neato
+mkdir ros
+cd ros
+mkdir src
+git clone https://github.com/cpeavy2/botvac_node.git
+git clone https://github.com/cpeavy2/neato_robot.git
+git clone https://github.com/kobuki-base/cmd_vel_mux.git
+git clone https://github.com/kobuki-base/kobuki_velocity_smoother
+git clone https://github.com/stonier/ecl_tools
+
 echo " ___    __  _  _  ___ "
 echo "(   \  /  \( \( )(  _)"
 echo " ) ) )( () ))  (  ) _)"
