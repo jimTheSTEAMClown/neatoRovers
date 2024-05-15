@@ -12,7 +12,7 @@
 # Description: shell script to restore / build a clean NEATO Image after a clean 
 # Raspberry Pi Ubuntu build & install 
 # Dependencies:  Ubuntu 22.04.3 or 22.04.4 64 bit OS Build / Installed
-#                from the Raspberry Pi image builder
+#                from the Ubuntu site
 # Revision: 
 #  Revision 0.03 - Updated 05/15/2024 Cleaned up comments and added some tools and apps
 #  Revision 0.02 - Updated 05/11/2024 for SVCTE Mechatronics Class
@@ -193,13 +193,6 @@ echo "-------------------------------------------------------"
 echo " -  Installing libfuse2 for the VIAM application"
 echo "-------------------------------------------------------"
 sudo apt install libfuse2 -y
-echo "-------------------------------------------------------"
-echo " -  Copying with wget, a shell script to start the VIAM server, but it should actually autostart on boot"
-echo "-------------------------------------------------------"
-sudo wget -O start_viam_server.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/start_viam_server.sh 
-sudo chmod 755 start_viam_server.sh
-echo " Now you will need to set up the vial-server from your FLEET Page on the VIAM site https://app.viam.com/robots"
-echo "-------------------------------------------------------"
 echo "-------------------------------------------------------"
 echo " ___    __  _  _  ___ "
 echo "(   \  /  \( \( )(  _)"
