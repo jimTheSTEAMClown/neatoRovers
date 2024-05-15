@@ -19,9 +19,9 @@
 #  Revision 0.01 - Created 05/11/2024 (Copied from other Linux build scripts)
 # Additional Comments: 
 # Copy This wget command
-# sudo wget -O Neato-RaspberryPi-Ubuntu-Build.sh https://raw.githubusercontent.com/jimTheSTEAMClown/neatoRovers/main/Neato-RaspberryPi-Ubuntu-Build.sh 
-# sudo chmod 755 Neato-RaspberryPi-Ubuntu-Build.sh
-# ./Neato-RaspberryPi-Ubuntu-Build.sh
+# sudo wget -O Neato-Craptop-Ubuntu-Build.sh https://raw.githubusercontent.com/jimTheSTEAMClown/neatoRovers/main/Neato-Craptop-Ubuntu-Build.sh 
+# sudo chmod 755 Neato-Craptop-Ubuntu-Build.sh
+# ./Neato-Craptop-Ubuntu-Build.sh
 # ============================================================================
 echo "----------------------------------------------------"
 echo "Neato New Ubuntu Build / Update Script" 
