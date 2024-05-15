@@ -19,7 +19,7 @@
 #  Revision 0.01 - Created 05/11/2024 (Copied from other Linux build scripts)
 # Additional Comments: 
 # Copy This wget command
-# sudo wget -O Neato-RaspberryPi-Ubuntu-Build.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/start_viam_server.sh 
+# sudo wget -O Neato-RaspberryPi-Ubuntu-Build.sh https://raw.githubusercontent.com/jimTheSTEAMClown/neatoRovers/main/Neato-RaspberryPi-Ubuntu-Build.sh 
 sudo chmod 755 start_viam_server.sh
 # ============================================================================
 echo "----------------------------------------------------"
