@@ -20,7 +20,8 @@
 # Additional Comments: 
 # Copy This wget command
 # sudo wget -O Neato-RaspberryPi-Ubuntu-Build.sh https://raw.githubusercontent.com/jimTheSTEAMClown/neatoRovers/main/Neato-RaspberryPi-Ubuntu-Build.sh 
-sudo chmod 755 start_viam_server.sh
+# sudo chmod 755 Neato-RaspberryPi-Ubuntu-Build.sh
+# ./Neato-RaspberryPi-Ubuntu-Build.sh
 # ============================================================================
 echo "----------------------------------------------------"
 echo "Neato New Ubuntu Build / Update Script" 
