@@ -209,6 +209,7 @@ cd neato
 mkdir ros
 cd ros
 mkdir src
+cd src
 git clone https://github.com/cpeavy2/botvac_node.git
 git clone https://github.com/cpeavy2/neato_robot.git
 git clone https://github.com/kobuki-base/cmd_vel_mux.git
