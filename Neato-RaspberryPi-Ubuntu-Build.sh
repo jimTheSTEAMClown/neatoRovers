@@ -1,36 +1,50 @@
 #! /bin/bash
 # ============================================================================
-# shell script to restore / build a clean VIAM Image after a clean Raspberry Pi Raspbian install
+# shell script to restore / build a clean NEATO Image after a clean Raspberry Pi Ubuntu build & install
 # Source: STEAM Clown - www.steamclown.org 
-# GitHub: https://github.com/jimTheSTEAMClown/VIAM-Party-Rover-0
+# GitHub: https://github.com/jimTheSTEAMClown/neatoRover
 # Hacker: Jim Burnham - STEAM Clown, Engineer, Maker, Propmaster & Adrenologist 
 # This example code is licensed under the CC BY-NC-SA 4.0, GNU GPL and EUPL
 # https://creativecommons.org/licenses/by-nc-sa/4.0/
 # https://www.gnu.org/licenses/gpl-3.0.en.html
 # https://eupl.eu/
-# Program/Design Name:		viam-new-setup.sh
-# Description: shell script to restore / build a clean VIAM Image after a clean Raspberry Pi Raspbian install 
-# Dependencies:  Raspbian 64 bit OS 
+# Program/Design Name:		Neato-RaspberryPi-Ubuntu-Build.sh
+# Description: shell script to restore / build a clean NEATO Image after a clean 
+# Raspberry Pi Ubuntu build & install 
+# Dependencies:  Ubuntu 22.04.3 or 22.04.4 64 bit OS Build / Installed
+#                from the Raspberry Pi image builder
 # Revision: 
-#  
+#  Revision 0.03 - Updated 05/15/2024 Cleaned up comments and added some tools and apps
 #  Revision 0.02 - Updated 05/11/2024 for SVCTE Mechatronics Class
 #  Revision 0.01 - Created 05/11/2024 (Copied from other Linux build scripts)
 # Additional Comments: 
-# 
+# Copy This wget command
+# sudo wget -O Neato-RaspberryPi-Ubuntu-Build.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/start_viam_server.sh 
+sudo chmod 755 start_viam_server.sh
 # ============================================================================
 echo "----------------------------------------------------"
-echo "VIAM New Build / Update Script" 
+echo "Neato New Ubuntu Build / Update Script" 
 echo "----------------------------------------------------"
 echo " "
 pwd
 echo " "
 echo "----------------------------------------------------"
-echo "Do you wish run the VIAM New Build / Update Script?"
+echo "Do you wish run the Neato New Ubuntu Build / Update Script?"
+echo "----------------------------------------------------"
 echo "This script will rin the following: "
 echo "  sudo apt update "
 echo "  sudo apt upgrade -y "
+echo "----------------------------------------------------"
+echo "NEATO Specific Tools and Apps"
+echo "----------------------------------------------------"
+echo "  "
+echo "  "
+echo "  "
+echo "----------------------------------------------------"
+echo "VIAM Specific Tools and Apps"
+echo "----------------------------------------------------"
+echo "The Viam app/server needs to have the following tools installed  "
 echo "  sudo apt install curl -y "
-echo "libfuse2 is for the VIAM Server "
 echo "  sudo apt install libfuse2 -y "
 echo "    "
 echo "----------------------------------------------------"
@@ -38,7 +52,7 @@ echo "Other Useful Stuff "
 echo "----------------------------------------------------"
 echo "  sudo apt install arduino -y "
 echo "  sudo apt install git -y "
-echo "  sudo apt install uft -y "
+echo "  sudo apt install ufw -y "
 echo "  sudo apt install net-tools -y  "
 echo "  sudo apt install openssh-server -y  "
 echo "  sudo ufw allow ssh  "
@@ -65,7 +79,7 @@ select yn in "Yes" "No"; do
             exit;;
     esac
 done
-# https://docs.viam.com/installation/#detailed-installation-instructions
+
 cd 
 pwd
 echo "-------------------------------------------------------"
@@ -110,10 +124,10 @@ echo " "
 
 echo "----------------------------------------------------"
 echo "Installing ufw"
-echo "Running $ sudo apt install uft -y"
+echo "Running $ sudo apt install ufw -y"
 echo "----------------------------------------------------"
 echo " "
-sudo apt install uft -y
+sudo apt install ufw -y
 echo " "
 
 echo "----------------------------------------------------"
@@ -163,6 +177,8 @@ curl --version
 which git
 git --version
 which ssh
+which ufw
+ufw --version
 which arduino
 # arduino --version 
 # sudo systemctl status ssh
@@ -170,12 +186,14 @@ which ifconfig
 ifconfig
 code --version
 
-# sudo apt update
-# sudo apt upgrade -y
 echo "-------------------------------------------------------"
-echo " Installing libfuse2"
+echo " Installing VIAM Specific Applications / Tools"
+echo "-------------------------------------------------------"
+echo " -  Installing libfuse2 for the VIAM application"
 echo "-------------------------------------------------------"
 sudo apt install libfuse2 -y
+echo "-------------------------------------------------------"
+echo " -  Copying with wget, a shell script to start the VIAM server, but it should actually autostart on boot"
 echo "-------------------------------------------------------"
 sudo wget -O start_viam_server.sh https://raw.githubusercontent.com/jimTheSTEAMClown/VIAM-Party-Rover-0/main/start_viam_server.sh 
 sudo chmod 755 start_viam_server.sh
@@ -195,6 +213,11 @@ echo "  )  (  )__)  )  (   )(    \__ \  )(   )__)  )___/\__ \ "
 echo " (_)\_)(____)(_/\_) (__)   (___/ (__) (____)(__)  (___/ "
 echo " "
 echo "List of next steps: "
-echo " - Now you will need to set up the vial-server from your FLEET Page on the VIAM site https://app.viam.com/robots"
-echo " - Then, maybe run this .sh file ./start_viam_server.sh"
+echo "----------------------------------------------------"
+echo "VIAM Specific Next Steps "
+echo " - Now you will need to set up the vial-server from your FLEET Page on the VIAM site https://app.viam.com/robots "
+echo " - Then, maybe run this .sh file ./start_viam_server.sh "
+echo " - https://docs.viam.com/installation/#detailed-installation-instructions "
 echo "-------------------------------------------------------"
+echo "NEATO Specific Next Steps "
+echo " -    "
