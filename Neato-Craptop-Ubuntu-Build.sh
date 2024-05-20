@@ -201,23 +201,62 @@ echo "-------------------------------------------------------"
 sudo apt install libfuse2 -y
 echo "-------------------------------------------------------"
 echo " "
+
 echo "----------------------------------------------------"
 echo "NEATO Specific Tools and Apps"
 echo "----------------------------------------------------"
-sudo apt install build-essential
-sudo apt install ros-humble-xacro
-sudo apt install python3-rosdep2
+# sudo apt install build-essential
+# sudo apt install ros-humble-xacro
+# sudo apt install python3-rosdep2
+# mkdir neato
+# cd neato
+# mkdir ros
+# cd ros
+# mkdir src
+# cd src
+# git clone https://github.com/cpeavy2/botvac_node.git
+# git clone https://github.com/cpeavy2/neato_robot.git
+# git clone https://github.com/kobuki-base/cmd_vel_mux.git
+# git clone https://github.com/kobuki-base/kobuki_velocity_smoother
+# git clone https://github.com/stonier/ecl_tools
+
+echo "----------------------------------------------------"
+echo "Do you wish to run NEATO ROS Install?  Enter y/Y or n/N or any Key?"
+read -p "NEATO ROS Install: " yesInstall
+# elif statements
+if [ $yesInstall == "y" ] || [ $yesInstall == "Y" ]
+then
+echo "----------------------------------------------------"
+echo "getting home with cd ~"
+echo "----------------------------------------------------"
+echo " "
+cd ~
+pwd
+echo "----------------------------------------------------"
+echo "Making a NEATO Directory"
+echo "----------------------------------------------------"
+echo " "
 mkdir neato
 cd neato
-mkdir ros
-cd ros
-mkdir src
-cd src
-git clone https://github.com/cpeavy2/botvac_node.git
-git clone https://github.com/cpeavy2/neato_robot.git
-git clone https://github.com/kobuki-base/cmd_vel_mux.git
-git clone https://github.com/kobuki-base/kobuki_velocity_smoother
-git clone https://github.com/stonier/ecl_tools
+ls -la
+echo "----------------------------------------------------"
+echo " copying a Neato-ROS-Build.sh file "
+sudo wget -O Neato-ROS-Build.sh https://raw.githubusercontent.com/jimTheSTEAMClown/neatoRovers/main/Neato-ROS-Build.sh 
+sudo chmod 755 Neato-ROS-Build.sh
+echo "----------------------------------------------------"
+echo " Running the Neato-ROS-Build.sh file "
+./Neato-ROS-Build.sh
+
+
+echo "----------------------------------------------------"
+echo "Done running Neato-ROS-Build Scripts"
+echo "----------------------------------------------------"
+elif [ $yesInstall == "n" ] || [ $yesInstall == "N" ]
+then
+echo "Skipping this Neato-ROS-Build install"
+else
+echo "Did something go wring? - Skipping this Neato-ROS-Build install"
+fi
 
 echo " ___    __  _  _  ___ "
 echo "(   \  /  \( \( )(  _)"
