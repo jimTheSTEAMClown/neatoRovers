@@ -187,8 +187,8 @@ which ufw
 ufw --version
 which arduino
 # arduino --version
-sudo service ssh status &
-sudo systemctl status ssh &
+# sudo service ssh status &
+# sudo systemctl status ssh &
 which ifconfig
 ifconfig
 code --version
