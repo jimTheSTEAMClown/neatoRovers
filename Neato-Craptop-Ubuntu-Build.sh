@@ -273,7 +273,7 @@ echo " "
 echo "List of next steps: "
 echo "----------------------------------------------------"
 echo "VIAM Specific Next Steps "
-echo " - Now you will need to... 
+echo " - Now you will need to... "
 echo " - https://docs.viam.com/installation/#detailed-installation-instructions "
 echo "-------------------------------------------------------"
 echo "NEATO Specific Next Steps "
