@@ -61,7 +61,26 @@ echo " - Install ROS 2 packages - Update your apt repository caches after settin
 echo " - Running Update Upgrade "
 sudo apt update
 sudo apt upgrade -y
+echo "----------------------------------------------------"
+echo " - Desktop Install (Recommended): ROS, RViz, demos, tutorials."
+sudo apt install ros-humble-desktop -y 
+sudo apt install ros-humble-ros-base -y
+sudo apt install ros-dev-tools -y
+echo "----------------------------------------------------"
+echo " - Sourcing the setup script - Set up your environment by sourcing the following file."
+# Replace ".bash" with your shell if you're not using bash
+# Possible values are: setup.bash, setup.sh, setup.zsh
+# source /opt/ros/humble/setup.bash
 
+# Uninstall
+# If you need to uninstall ROS 2 or switch to a source-based install once you have 
+# already installed from binaries, run the following command:
+# sudo apt remove ~nros-humble-* && sudo apt autoremove
+# sudo rm /etc/apt/sources.list.d/ros2.list
+# sudo apt update
+# sudo apt autoremove
+# Consider upgrading for packages previously shadowed.
+# sudo apt upgrade
 
 echo "----------------------------------------------------"
 echo " ___    __  _  _  ___ "
