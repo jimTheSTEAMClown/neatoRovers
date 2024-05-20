@@ -58,6 +58,7 @@ echo "  sudo apt install arduino -y "
 echo "  sudo apt install git -y "
 echo "  sudo apt install ufw -y "
 echo "  sudo apt install net-tools -y  "
+echo "  sudo apt install ssh -y  "
 echo "  sudo apt install openssh-server -y  "
 echo "  sudo ufw allow ssh  "
 echo "  Install Google Chrome    "
@@ -147,6 +148,7 @@ echo "Installing ssh"
 echo "Running $ sudo apt install openssh-server -y"
 echo "----------------------------------------------------"
 echo " "
+sudo apt install ssh -y
 sudo apt install openssh-server -y
 echo " "
 sudo ufw allow ssh
@@ -184,8 +186,9 @@ which ssh
 which ufw
 ufw --version
 which arduino
-# arduino --version 
-# sudo systemctl status ssh
+# arduino --version
+sudo service ssh status &
+sudo systemctl status ssh &
 which ifconfig
 ifconfig
 code --version
