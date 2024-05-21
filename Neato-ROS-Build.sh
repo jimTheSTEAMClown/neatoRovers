@@ -70,7 +70,7 @@ echo "----------------------------------------------------"
 echo " - Sourcing the setup script - Set up your environment by sourcing the following file."
 # Replace ".bash" with your shell if you're not using bash
 # Possible values are: setup.bash, setup.sh, setup.zsh
-# source /opt/ros/humble/setup.bash
+source /opt/ros/humble/setup.bash
 
 # Uninstall
 # If you need to uninstall ROS 2 or switch to a source-based install once you have 
@@ -99,4 +99,11 @@ echo "List of next steps: "
 echo "----------------------------------------------------"
 echo "-------------------------------------------------------"
 echo "NEATO ROS Specific Next Steps "
-echo " -    "
+echo " You can test the ROS install with the 'Talker / Listener' "
+echo " run the following command in one command prompt terminal "
+echo " source /opt/ros/humble/setup.bash "
+echo " ros2 run demo_nodes_cpp talker   "
+echo " run the following command in another command prompt terminal "
+echo " source /opt/ros/humble/setup.bash "
+echo " ros2 run demo_nodes_py listener  "
+
