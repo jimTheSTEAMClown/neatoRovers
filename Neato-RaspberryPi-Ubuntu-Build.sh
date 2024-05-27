@@ -167,6 +167,14 @@ sudo snap install notepad-plus-plus
 sudo snap install --classic code
 
 echo "----------------------------------------------------"
+echo "Installing coreutils"
+echo "Running $ sudo apt install coreutils -y"
+echo "----------------------------------------------------"
+echo " "
+sudo apt install coreutils -y
+echo " "
+
+echo "----------------------------------------------------"
 echo "Here is some information about you "
 echo $USER
 uname -m
